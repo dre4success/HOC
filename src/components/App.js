@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./header";
 import Resources from './resources';
+import requireAuth from './requireAuth';
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
         <div>
           <Header />
           <Switch> 
-            <Route exact path="/resources" component={Resources} />
+            <Route exact path="/resources" component={requireAuth(Resources)} />
           </Switch>
         </div>
         </BrowserRouter>
