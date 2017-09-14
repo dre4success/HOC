@@ -9,9 +9,9 @@ class App extends Component {
       <div>
         <BrowserRouter>
         <div>
-          <Switch>
-            <Route path="/" component={Header} />
-            <Route path="/resources" component={Resources} />
+          <Header />
+          <Switch> 
+            <Route exact path="/resources" component={Resources} />
           </Switch>
         </div>
         </BrowserRouter>
